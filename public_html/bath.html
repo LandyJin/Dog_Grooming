@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Grooming</title>
+	<meta name="author" content="Landy">
+	<meta name="description" content="This is where you can find your favourite dogs breed!">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <style type="text/css">
+	 	body {background-color: #f2f2f2;}
+
+	 	div.jumbotron {
+	 		text-align: center;
+	 		background: linear-gradient(to bottom right, #ff8080, #ffc299, #ffe6e6);
+	 	}
+
+		table {
+			margin-top: 30px;
+		}
+
+		#newCarousel {
+			width: 500px;
+			margin: auto;
+		}
+
+		#nav {
+			background: linear-gradient(to bottom right, #ff7733, #ffccb3, #f2f2f2);
+		}
+
+		div.container {
+			margin-bottom: 100px;
+		}
+
+		footer {
+			position:fixed;
+			bottom:0px;
+			width: 100%;
+			padding: 1em;
+			background-color: lightgrey;
+		    color: black;
+		    clear: left;
+		    text-align: center;
+		}
+
+		h3 {
+			text-align: left;
+			color: #ff7733;
+		}
+
+		caption {
+			font-size: 1.25em;
+			text-align: center;
+		}
+
+		tr:last-child{
+			background-color: #CCC;
+		}
+
+		td.width {
+			width: 70%;
+		}
+
+		button {
+			  float: right;
+			  margin-top: 10px; 
+		}
+	 </style>
+</head>
+<body>
+	<nav class="navbar navbar-default" id="nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+		    	<a class="navbar-brand" href="dogGrooming.html">Dog Grooming</a>
+		    </div>
+
+		    <ul class="nav navbar-nav">
+				<li class="active"><a href="dogGrooming.html">Home</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Service<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+				        <li><a href="bath.html">Bath</a></li>
+				        <li><a href="gromming.html">Grooming</a></li>
+				        <li><a href="dayCare.html">Day Care</a></li>
+			        </ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Tips for owners<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+				        <li><a href="puppy.html">Puppy Intro Program</a></li>
+				        <li><a href="tips.html">New Puppy Tips</a></li>
+				        <li><a href="care.html">Caring for your dog</a></li>
+			        </ul>
+			    </li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5">
+				<img src="grooming1.jpg" class="img-rounded" alt="bath" style="width: 100%">
+			</div>
+
+			<div class="col-sm-7">
+				<h3>Bath, dry and groom out</h3><br>
+				<p><b>Happy and healthy dogs need to be fed a good diet, given regular exercise and kept well groomed.  And effective grooming starts with bathing your dog.</b></p>
+				<p>Dog Grooming uses hydrobaths to clean your dog the way hand washing alone can’t – the spray head produces a unique hydro-combing action that massages and stimulates the skin, so not only is it the most effective way of washing your dog but also provides a therapeutic water massage. This helps with blood circulation, relieves tired muscles and has been found to be beneficial for arthritis sufferers and older dogs.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<table class="table table-bordered">
+					<caption>Grooming Service List</caption>
+					<tr class="danger">
+						<th>Service Type</th>
+						<th>Include</th>
+						<th>Price From</th>
+					</tr>
+
+					<tr>
+						<td>Hydrobath</td>
+						<td class="width">Warm bath using appropriate shampoo/conditioner for your dog, warm blow dry, comb/brush and nail clip</td>
+						<td>$30</td>
+					</tr>
+
+					<tr>
+						<td>Bath and Tidy</td>
+						<td class="width">Warm bath using appropriate shampoo/conditioner for your dog, warm blow dry, comb/brush, tidy of face, feet, tail and sanitary areas and nail clip</td>
+						<td>$40</td>
+					</tr>
+
+					<tr>
+						<td>Extra</td>
+						<td colspan="3">Price base on breed and size, please call or email to get a quote.<br>
+​						$10-20 extra for matted coat or difficult pet<br>
+​						Anal glands for $5<br></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<button type="button"><a href="#nav">Back to Top</a></button>
+	</div>
+
+	<footer>
+		Copyright &copy; 2017 Deakin soft Pty Ltd.
+	</footer>
+</body>
+</html>

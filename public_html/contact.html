@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta name="author" content="Landy">
+	<meta name="description" content="This is where you can find your favourite dogs breed!">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <style type="text/css">
+	 	body {background-color: #f2f2f2;}
+
+	 	div.jumbotron {
+	 		text-align: center;
+	 		background: linear-gradient(to bottom right, #ff8080, #ffc299, #ffe6e6);
+	 	}
+
+		table {
+			margin-top: 30px;
+		}
+
+		#newCarousel {
+			width: 500px;
+			margin: auto;
+		}
+
+		#nav {
+			background: linear-gradient(to bottom right, #ff7733, #ffccb3, #f2f2f2);
+		}
+
+		div.container {
+			margin-bottom: 100px;
+		}
+
+		footer {
+			position:fixed;
+			bottom:0px;
+			width: 100%;
+			padding: 1em;
+			background-color: lightgrey;
+		    color: black;
+		    clear: left;
+		    text-align: center;
+		}
+
+		h2 {
+			text-align: left;
+			color: #ff7733;
+		}
+
+		form {  
+            background-color:#eaeaea;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 10px; 
+            margin-top: 50px;
+        }
+
+        label { 
+            float: left;
+            width: 100px; 
+            clear: left;
+            text-align: right; 
+            padding-right: 10px;
+            margin-top: 10px; 
+        }
+
+        input, textarea { 
+            margin-top: 10px; 
+            display: block; 
+        } 
+
+        #mySubmit { margin-left: 110px; }
+
+	 </style>
+</head>
+<body>
+	<nav class="navbar navbar-default" id="nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+		    	<a class="navbar-brand" href="home.html">Dog Grooming</a>
+		    </div>
+
+		    <ul class="nav navbar-nav">
+				<li class=""><a href="home.html">Home</a></li>
+				<li class=""><a href="service.html">Service</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Tips for owners<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+				        <li><a href="puppy.html">Puppy Intro Program</a></li>
+				        <li><a href="tips.html">New Puppy Tips</a></li>
+				        <li><a href="care.html">Caring for your dog</a></li>
+			        </ul>
+			    </li>
+				<li><a href="about.html">About Us</a></li>
+				<li class="active"><a href="contact.html">Contact Us</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	
+	<div class="row" style="background-color: #c7e09f; padding: 60px 30px 90px 30px;">
+		<div class="col-sm-6"><br>
+			<h2>Email: </h2>
+			<a href="jinhuiy@deakin.edu.au">jinhuiy@deakin.edu.au</a>
+		</div>
+		<div class="col-sm-6"><br>
+			<h2>Phone: </h2>
+			<p id="contentArea" onmouseover="overMessage()" onmouseout="outMessage()">0405181503</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<form action="/contact" method="post"  name="contact" id="contact" onsubmit="return validation()">
+		            <label for="myName">&#42;Name: </label>
+		            <input type="text" name="myName" id="myName"><span id="NameMessage"></span>
+
+		            <label for="myEmail">&#42;E-mail: </label>
+		            <input type="text" name="myEmail" id="myEmail"><span id="EmailMessage"></span>
+
+		            <label for="phone">&#42;Phone: </label>
+		            <input type="tel" name="phone" id="phone" maxlength="10"><span id="PhoneMessage"></span>
+
+		            <label for="subject">Subject: </label>
+		            <input type="text" name="subject" id="subject"><span id="SubjectMessage"></span>
+
+		            <label for="myComments">Comments: </label>
+		            <textarea name="myComments" id="myComments" rows="3" cols="20"></textarea>
+
+		            <div style="margin-left: 100px; margin-top: 10px;">
+		            <input type="checkbox" style="display: inline; margin-right: 10px" required="">Agree the conditions<br>
+
+		            <input type="submit" name="Sign Me Up!" style="display: inline"> &nbsp;&nbsp;&nbsp; <input type="reset" style="display: inline">
+		            </div>
+		        </form>
+			</div>
+
+			<div class="col-sm-6">
+				<img src="phone.jpg" class="img-rounded" alt="style" style="width: 90%; margin: 65px 0 0 5%;">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		Copyright &copy; 2017 Deakin soft Pty Ltd.
+	</footer>
+	<script>
+        function validation(){
+        	console.log("hello");
+        	console.log(document.getElementById("myName").value.length);
+        	console.log(document.getElementById("myEmail").value.length);
+        	console.log(document.getElementById("myEmail").value.indexOf("@"));
+        	console.log(document.getElementById("phone").value.length);
+        	console.log(document.getElementById("phone").value.match(/[a-z]/i));
+            if (document.getElementById("myName").value.length == 0){
+                document.getElementById("NameMessage").innerHTML = "*Please enter name here.";
+            }
+            else{
+                document.getElementById("NameMessage").innerHTML = "";
+            }
+
+            if(document.getElementById("myEmail").value.length == 0){
+                document.getElementById("EmailMessage").innerHTML = "*Please enter your email here.";
+            }
+            else{
+
+                if (document.getElementById("myEmail").value.indexOf("@") == -1){
+                    document.getElementById("EmailMessage").innerHTML = "*Your email format is incorrect, please try again";
+                }
+                else{
+                    document.getElementById("EmailMessage").innerHTML = "";
+                }
+            }
+
+            
+
+            if (document.getElementById("phone").value.length == 0){
+                document.getElementById("PhoneMessage").innerHTML = "*Please enter phone number here.";
+            }
+            else if(document.getElementById("phone").value.length != 10){
+
+            	 document.getElementById("PhoneMessage").innerHTML = "*Please enter your 10 digits phone number.";
+            }
+            else if(document.getElementById("phone").value.length == 10) {
+
+                var str = document.getElementById("phone").value;
+                for (var i = 0; i < str.length; i++) {
+                  if(str[i].toLowerCase().match(/[a-z]/i)){
+
+                    document.getElementById("PhoneMessage").innerHTML = "Your phone number contains character '"+ str[i] +"'.";
+                  }
+
+		            else{
+
+		            	document.getElementById("PhoneMessage").innerHTML = "";
+		            }
+                }
+            }
+
+            if(document.getElementById("myName").value.length == 0 || document.getElementById("myEmail").value.length == 0 || document.getElementById("myEmail").value.indexOf("@") == -1 || document.getElementById("phone").value.length == 0 || document.getElementById("phone").value.length != 10 )
+            {
+                return false;
+            }
+        }           
+        function overMessage(){
+            document.getElementById("contentArea").style.backgroundColor = "Orange";
+            document.getElementById("contentArea").style.color = "white";
+        }
+
+        function outMessage(){
+            document.getElementById("contentArea").style.backgroundColor = null;
+            document.getElementById("contentArea").style.color = null;
+        }
+        </script>
+</body>
+</html>
